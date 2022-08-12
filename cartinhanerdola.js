@@ -1,36 +1,5 @@
-/*const next = document.querySelector("#next")
-var min=0
-var max =4
-next.addEventListener('click', function () {
-        fetch(`https://api.magicthegathering.io/v1/cards?page=15`).then(promise => {
-            return promise.json()
-        }).then(cards => {
-            cards = cards.cards
-            console.log(cards)
-            while(min < max){
-                if (cards[min].imageUrl != null) {
 
-                    document.querySelector('div').innerHTML +=
-                        `
-            <div>
-            <img src='${cards[min].imageUrl}' class='${cards[min].rarity}' alt='${cards[min].name}' width="265px" height="370px">
-            <br>
-            <a> &nbsp &nbsp &nbsp ${cards[min].name} / ${cards[min].set} </a>
-            </div>
-            `;
 
-                }
-                min++
-               
-            }
-        })
-        max+=4
-    console.log(max)
-       
-})
-*/
-
-// external js: flickity.pkgd.js
 function generate(contador, max) {
     while (contador < max) {
         fetch(`https://api.magicthegathering.io/v1/cards?page=${contador}`).then(promise => {
